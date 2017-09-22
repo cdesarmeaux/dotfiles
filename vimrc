@@ -6,8 +6,10 @@ nmap <silent> <C-W><C-G> :IndentGuidesToggle<CR>
 nmap <silent> <C-W><C-K> :TagbarToggle<CR>
 nmap <silent> <C-E><C-N> :Errors<CR>
 nmap <silent> <C-E><C-W> :lclose<CR>
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 let g:email = "cdesarmeaux@loutech-software.com"
 let g:user = "Casimir Desarmeaux"
+let g:NERDTreeIgnore = ['\.pyc$', 'delta.egg-info', 'bin', 'develop-eggs', 'eggs', 'parts']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
